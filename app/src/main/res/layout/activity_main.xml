@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chocolate_500"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="Cocktail DB"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <SearchView
+            android:background="@drawable/search_bar_background"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/search_bar"
+            android:focusable="false"
+            android:focusedByDefault="false"
+            android:focusableInTouchMode="true"
+            android:layoutDirection="rtl"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search a cocktail"
+            android:layout_margin="5dp"
+            tools:targetApi="o" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/app_bar"
+        android:id="@+id/recycler_view_drinks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/not_found_text"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:text="Type first letter only!!"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:gravity="center"/>
+
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity"
+    android:background="@color/chocolate_500"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:src="@drawable/ic_arrow_back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="@android:color/transparent"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Let's have a drink!!"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailsActivity"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".DetailsActivity"
+            android:orientation="vertical">
+
+            <ImageView
+                android:transitionName="drink_image"
+                android:src="@color/design_default_color_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:id="@+id/iv_drink"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Instructions"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:gravity="left"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/tv_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lorem ipsum shcnd hsadjb sadgjhs asdguhjsdb dsgjdsb"
+                android:textSize="14dp"
+                android:textStyle="normal"
+                android:padding="8dp"
+                android:gravity="left"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Glass"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:gravity="left"/>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/tv_glass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lorem ipsum shcnd hsadjb sadgjhs asdguhjsdb dsgjdsb"
+                android:textSize="14dp"
+                android:textStyle="normal"
+                android:padding="8dp"
+                android:gravity="left"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
